@@ -1,17 +1,13 @@
 import React from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { data } from "../../dataBase/dataBase";
 
-function ItemDetailContainer()
+const ItemDetailContainer = () =>
 {
-
-    const { idProducto } = useParams();
-
-    const product = data[idProducto-1];
-
+    let {product} = useLocation();
     return(
         <div>
-            <div key={product.id} className="card w-25 mt-2">
+            <div className="card w-25 mt-2">
                 <div className="card-header">
                     {product.name}
                 </div>

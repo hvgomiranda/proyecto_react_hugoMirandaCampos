@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { taskFetch } from '../../dataBase/dataBase.jsx';
-import { ItemDetailContainer } from "../ItemDetailContainer/ItemDetailContainer.jsx";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer.jsx";
 import { Link, useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
@@ -42,7 +42,7 @@ const ItemListContainer = () => {
                 Precio: {product.price}
             </div>
             <div className='card-footer'>
-              <Link to={`/details/${product.name}`}>
+              <Link to={`/details/${product.name}`} element={<ItemDetailContainer />} state={product} >
                 <button className='btn btn-outline-primary w-100'>
                     Detalles
                 </button>

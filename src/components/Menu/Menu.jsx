@@ -8,7 +8,7 @@ function Menu()
         let menu = document.querySelector(".Menu-btn");
         if(menu.innerHTML === "Menú")
         {
-            menu.innerHTML = "X";
+            menu.innerHTML = "Cerrar";
         }
         else
         {

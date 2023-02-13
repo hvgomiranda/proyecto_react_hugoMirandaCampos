@@ -8,11 +8,12 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App MenuDisplay">
         <NavBar className="Header"/>
         <Routes>
           <Route exact path="/" element={<ItemListContainer/>}/>
-          <Route path="/details/:idProduct" element={<ItemDetailContainer/>}/>
+          <Route path="/details/:Product" element={<ItemDetailContainer/>}/>
+          <Route path="/category/:Category" />
           <Route path="*" element={ <Navigate to="/"/> }></Route>
         </Routes>
       </div>

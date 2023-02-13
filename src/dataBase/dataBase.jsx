@@ -4,7 +4,7 @@ export const data = [
       name: 'zapatos',
       description: 'zapatos negros',
       category: "calzado",
-      img: "../media/img/zapatos.jpg",
+      img: require("../media/img/zapatos.jpg"),
       price: 25000,
       stock: 30,
     },
@@ -13,7 +13,7 @@ export const data = [
       name: 'medias',
       description: 'medias 3/4 blancas',
       category: "medias",
-      img: "../media/img/medias-blancas.jpg",
+      img: require("../media/img/medias-blancas.jpg"),
       price: 500,
       stock: 300,
     },
@@ -22,7 +22,7 @@ export const data = [
       name: 'pantalones',
       description: 'jeans claros',
       category: "pantalones",
-      img: "../media/img/jeans.jpg",
+      img: require("../media/img/jeans.png"),
       price: 8000,
       stock: 100,
     },
@@ -31,7 +31,7 @@ export const data = [
       name: 'camisa',
       description: 'camisas blancas',
       category: "arriba",
-      img: "../media/img/camisa-lino-beige.jpg",
+      img: require("../media/img/camisa-lino-beige.jpg"),
       price: 5500,
       stock: 100,
     },
@@ -40,7 +40,7 @@ export const data = [
       name: 'sombrero',
       description: 'sombrero fino marrón',
       category: "tocado",
-      img: "../media/img/sombrero-fieltro.jpeg",
+      img: require("../media/img/sombrero-fieltro.jpeg"),
       price: 3400,
       stock: 30,
     },
@@ -51,6 +51,6 @@ export const data = [
       setTimeout(() => {
         let result = true ? resolve(data) : reject(data);
         return result;
-      }, 3000);
+      }, 1000);
     });
   };
