@@ -1,6 +1,7 @@
 import React from 'react';
-import { useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation, Link } from "react-router-dom";
 import { data } from "../../dataBase/dataBase";
+import ItemListContainer from '../ItemListContainer/ItemListContainer';
 
 const ItemDetailContainer = () =>
 {
@@ -19,6 +20,11 @@ const ItemDetailContainer = () =>
                     Categoría: {product.category}<br/>
                     Precio: {product.price}
                 </div>
+                <Link to={"/"} element={<ItemListContainer />} >
+                <button className='btn btn-outline-primary w-100'>
+                    Volver
+                </button>
+              </Link>
             </div>
         </div>
     )
