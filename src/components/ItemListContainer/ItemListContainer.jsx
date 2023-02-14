@@ -42,7 +42,7 @@ const ItemListContainer = () => {
                 Precio: {product.price}
             </div>
             <div className='card-footer'>
-              <Link to={`/details/${product.name}`} element={<ItemDetailContainer />} state={product} >
+              <Link to={`/details/${product.name}`} element={<ItemDetailContainer />} state={{data: product}} >
                 <button className='btn btn-outline-primary w-100'>
                     Detalles
                 </button>

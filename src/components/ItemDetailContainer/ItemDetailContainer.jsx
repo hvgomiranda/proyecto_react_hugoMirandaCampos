@@ -4,7 +4,10 @@ import { data } from "../../dataBase/dataBase";
 
 const ItemDetailContainer = () =>
 {
-    let {product} = useLocation();
+
+    const location = useLocation();
+    const product = location.state?.data;
+
     return(
         <div>
             <div className="card w-25 mt-2">
