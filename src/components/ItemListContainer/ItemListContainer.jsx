@@ -8,14 +8,16 @@ import { Link, useParams } from "react-router-dom";
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
 
-  const { idCategory } = useParams();
+  const { category } = useParams();
+
+  console.log(category)
 
   useEffect(() => {
-    if(idCategory)
+    if(category)
     {
       taskFetch()
       .then((res) => {
-        setProducts(res.filter(producto => producto.category === idCategory))
+        setProducts(res.filter(product => product.category === category))
       })
       .catch((error) => console.log("not ok"));     
     }
@@ -27,7 +29,7 @@ const ItemListContainer = () => {
       })
       .catch((error) => console.log('not ok'));
     }
-  }, [idCategory]);
+  }, [category]);
 
   return (
     <div style={{display: "flex", flexDirection: "row", flexWrap:"wrap"}}>
